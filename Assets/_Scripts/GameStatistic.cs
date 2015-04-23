@@ -46,11 +46,11 @@ public class GameStatistic : MonoBehaviour {
 	public void GetRates()
 	{
 		int grade;
-		string[] AllRates = new string[5] {"D", "C", "B", "A", "S"};
+		string[] AllRates = new string[6] {"D", "C", "B", "A", "S", "SS"};
 		for(int i = 0; i < 2; ++i)
 		{
 			grade = Scores[i] * 15 + Attacks[i] + Ults[i] * 5;
-			grade = Mathf.Clamp((grade - 140) / 60, 0, 4);
+			grade = Mathf.Clamp((grade - 140) / 60, 0, 5);
 			Rates[i] = AllRates[grade];
 		}
 	}

@@ -62,7 +62,7 @@ GameObject:
   - 222: {fileID: 22295750}
   - 114: {fileID: 11461092}
   m_Layer: 5
-  m_Name: Assassins
+  m_Name: Wizards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ GameObject:
   - 222: {fileID: 22201540}
   - 114: {fileID: 11411782}
   m_Layer: 5
-  m_Name: Templar
+  m_Name: Priests
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,7 +418,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Templar
+  m_Text: 'Priests
+
+'
 --- !u!114 &11413352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -770,7 +772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AssassinS
+  m_Text: Wizards
 --- !u!114 &11461420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1000,6 +1002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeamSize: 2
   CanStart: 0
+  GameStarting: 0
   StartHint: {fileID: 177714}
 --- !u!222 &22200396
 CanvasRenderer:
