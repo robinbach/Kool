@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/_Scene/MainMap.unity
   - enabled: 1
     path: Assets/_Scene/EndStat.unity
+  - enabled: 1
+    path: Assets/_Scene/CreditScreen.unity
