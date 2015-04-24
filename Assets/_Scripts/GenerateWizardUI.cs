@@ -5,7 +5,7 @@ public class GenerateWizardUI : MonoBehaviour {
 
 	public GameObject playerHealthPrefab;
 	public GameObject namePrefab;
-	public GameObject specialSpellPrefab;
+//	public GameObject specialSpellPrefab;
 	public GameObject ButtonIcon;
 	public GameObject ButtonIcon2;
 
@@ -31,8 +31,8 @@ public class GenerateWizardUI : MonoBehaviour {
 			health.transform.SetParent(this.transform);
 			GameObject name = Instantiate(namePrefab) as GameObject;
 			name.transform.SetParent(this.transform);
-			GameObject specialSpell = Instantiate(specialSpellPrefab) as GameObject;
-			specialSpell.transform.SetParent(this.transform);
+//			GameObject specialSpell = Instantiate(specialSpellPrefab) as GameObject;
+//			specialSpell.transform.SetParent(this.transform);
 			if (ButtonIcon){
 				GameObject button = Instantiate(ButtonIcon) as GameObject;
 				Debug.Log ("button instantiate");
@@ -51,11 +51,11 @@ public class GenerateWizardUI : MonoBehaviour {
 			
 			PlayerHealthView healthUI  = health.GetComponent<PlayerHealthView>();
 			PlayerNameView nameUI = name.GetComponent<PlayerNameView>();
-			SpecialSpellView specialSpellUI = specialSpell.GetComponent<SpecialSpellView>();
+//			SpecialSpellView specialSpellUI = specialSpell.GetComponent<SpecialSpellView>();
 			
 			healthUI.playerId = playerId;
 			nameUI.playerId = playerId;
-			specialSpellUI.playerId = playerId;
+//			specialSpellUI.playerId = playerId;
 		}
 	}
 	
