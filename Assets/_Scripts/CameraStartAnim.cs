@@ -44,29 +44,36 @@ public class CameraStartAnim : MonoBehaviour {
 			if(this != _instance)
 				Destroy(this.gameObject);
 		}
-		camera = GetComponent<Camera>();
-		allTargets.Clear ();
-		GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
-		foreach (GameObject obj in objs) {
-			allTargets.Add(obj.transform);
-		}
-		Invoke ("ZoomIn", 0.1f);
-		Invoke ("ZoomOut", 2);
-		Invoke ("ZoomIn", 3);
-		Invoke ("ZoomOut", 5);
-		Invoke ("ZoomIn", 6);
-		Invoke ("ZoomOut", 8);
-		Invoke ("ZoomIn", 9);
-		Invoke ("ZoomDone", 11);
+		
+		Invoke ("UpdateAllTarget", 0.1f);
+
+
 
 	}
 	public void UpdateAllTarget(){
+		done = false;
 		allTargets.Clear ();
 		UserData[] udatas = UserInfoManager.UserDataCollection;
 		foreach (UserData ud in udatas) {
+			if(ud.wizardInstance){
 			allTargets.Add(ud.wizardInstance.transform);
+				targets.Add(ud.wizardInstance.transform);
+				UserInputManager inputManager = ud.wizardInstance.GetComponent<UserInputManager>();
+				inputManager.LockControl(UserInputManager.InputSource.AllControl, 13.0f);
+			}
 		}	
+		camera = GetComponent<Camera>();
+		Debug.Log("CONTROL LOCKED FOR CAMERA ZOOM");
+		Invoke ("ZoomIn", 2.1f);
+		Invoke ("ZoomOut", 4);
+		Invoke ("ZoomIn", 5);
+		Invoke ("ZoomOut", 7);
+		Invoke ("ZoomIn", 8);
+		Invoke ("ZoomOut", 10);
+		Invoke ("ZoomIn", 11);
+		Invoke ("ZoomDone", 13);
 	}
+
 
 
 	void ZoomIn(){
@@ -76,10 +83,10 @@ public class CameraStartAnim : MonoBehaviour {
 	}
 	void ZoomOut(){
 		targets.Clear ();
-		GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
-		foreach (GameObject obj in objs) {
-			targets.Add(obj.transform);
-		}
+		UserData[] udatas = UserInfoManager.UserDataCollection;
+		foreach (UserData ud in udatas) {
+			targets.Add(ud.wizardInstance.transform);
+		}	
 	}
 	void ZoomDone(){
 		done = true;

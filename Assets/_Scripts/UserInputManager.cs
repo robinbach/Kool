@@ -44,11 +44,14 @@ public class UserInputManager : MonoBehaviour {
 	public event OnInput OnPressButton;
 	public event OnInput OnReleaseButton;
 	private InputDevice inputDevice;
-
+	private Animator animator;
 	// input lock of each: 0left, 1right, 2buttons, 3Ltrigger, 4RTrigger, 5Lbumper, 6Rbumper;
 	private bool[] ctrlLocks = new bool[7]{false, false, false, false, false, false, false};
 	void Start()
-	{}
+	{
+		animator = GetComponentInChildren<Animator> ();
+
+	}
 	
 	void Update()
 	{
@@ -354,7 +357,7 @@ public class UserInputManager : MonoBehaviour {
 				break;
 
 			case InputSource.LTrigger:
-				if ((inputDevice.LeftStickX != 0 || inputDevice.LeftStickY != 0) && inputDevice.LeftTrigger.IsPressed)
+			if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
 					returnV = true;
 			break;
 
@@ -371,7 +374,7 @@ public class UserInputManager : MonoBehaviour {
 			break;
 
 			case InputSource.LtriggerAndRTrigger:
-			if ((inputDevice.LeftStickX != 0 || inputDevice.LeftStickY != 0) && inputDevice.LeftTrigger.IsPressed)
+			if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
 				returnV = inputDevice.RightTrigger.WasPressed;
 			break;
 

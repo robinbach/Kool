@@ -349,10 +349,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1884243261}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 1}
-  m_AnchorMax: {x: .5, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -113, y: -177}
-  m_SizeDelta: {x: 169, y: 59}
+  m_SizeDelta: {x: -795, y: 59}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &568281661
 MonoBehaviour:
@@ -467,6 +467,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11440658, guid: 2c346bc3cd1ac407d8460dcba2ae46a1, type: 2}
+      propertyPath: m_Text
+      value: "kills \t   \t\t  5\t\t\t\t\t5\nattacks \t   \t  5\t\t\t\t\t5\nult used\t
+        \ \t  5\t\t\t\t\t5\nrate\t\t\t  A\t\t\t  \t\tS\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440658, guid: 2c346bc3cd1ac407d8460dcba2ae46a1, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440658, guid: 2c346bc3cd1ac407d8460dcba2ae46a1, type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c346bc3cd1ac407d8460dcba2ae46a1, type: 2}
   m_IsPrefabParent: 0
@@ -512,7 +525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wizard'S Creed
+  m_Text: Wizard'S CreeD
 --- !u!222 &899194798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -722,6 +735,30 @@ Prefab:
       propertyPath: Rates.Array.data[1]
       value: C
       objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Scores.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Scores.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Attacks.Array.data[0]
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Attacks.Array.data[1]
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Ults.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491810, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
+      propertyPath: Ults.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48b6e506a46334e13bc1b40456c943d2, type: 2}
   m_IsPrefabParent: 0
@@ -825,10 +862,10 @@ RectTransform:
   - {fileID: 2130843375}
   m_Father: {fileID: 2082388185}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 1}
-  m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -191.5}
-  m_SizeDelta: {x: 642, y: 383}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1884243262
 MonoBehaviour:

@@ -154,7 +154,8 @@ public class GameStatus : MonoBehaviour {
 			}
 			else
 			{
-				StartCoroutine(UserInfoManager.Instance.RebornPlayerWithId(playerID));
+				if(!isGameOver && Application.loadedLevelName != "EndStat")
+					StartCoroutine(UserInfoManager.Instance.RebornPlayerWithId(playerID));
 			}
 			break;
 		default:

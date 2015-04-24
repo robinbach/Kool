@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 1
   GameTargetRounds: 7
-  GameMaxTime: 200
+  GameMaxTime: 300
 --- !u!114 &11491810
 MonoBehaviour:
   m_ObjectHideFlags: 1

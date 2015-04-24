@@ -10,12 +10,20 @@ public class TimeBoard : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		txt = GetComponent<Text> ();
+		txt.enabled = false;
 		time = GameStatus.Instance.GameMaxTime;
 		StartCoroutine (TimeCountDown ());
 	}
 
 	IEnumerator TimeCountDown()
 	{
+		if (CameraStartAnim.Instance.done != true)
+			yield return new WaitForSeconds(12.0f);
+
+		txt.enabled = true;
+		txt.text = "Start!";
+		yield return new WaitForSeconds(3.0f);
+
 		while(time > 0)
 		{
 			time--;

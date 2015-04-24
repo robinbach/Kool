@@ -55,7 +55,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "scores \t\t  5\t\t\t\t\t5\nattacks \t   \t  5\t\t\t\t\t5\nult used\t  \t
+  m_Text: "kills \t\t  5\t\t\t\t\t5\nattacks \t   \t  5\t\t\t\t\t5\nult used\t  \t
     \ 5\t\t\t\t\t5\nrate\t\t\t  A\t\t\t  \t\tS\n\n"
 --- !u!222 &22255068
 CanvasRenderer:

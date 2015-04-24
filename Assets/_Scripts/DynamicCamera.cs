@@ -20,10 +20,12 @@ public class DynamicCamera : MonoBehaviour {
 			return;
 		}
 		targets.Clear ();
-		GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
-		foreach (GameObject obj in objs) {
-			targets.Add(obj.transform);
-		}
+		UserData[] udatas = UserInfoManager.UserDataCollection;
+		foreach (UserData ud in udatas) {
+			if(ud.wizardInstance){
+				targets.Add(ud.wizardInstance.transform);
+			}
+		}	
 		Rect boundingBox = CalculateTargetsBoundingBox();
 		Vector3 camerNextPos = CalculateCameraPosition(CalculateCameraBoundingBox(boundingBox));
 		Vector3 velocity = Vector3.zero;

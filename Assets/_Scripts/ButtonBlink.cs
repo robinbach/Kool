@@ -12,7 +12,7 @@ public class ButtonBlink : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		img = GetComponent<Image> ();
-		Blink (90, 1f);
+		Blink (1000, 1f);
 		TV = UnityEngine.Object.FindObjectOfType<TutorialView>();
 	}
 

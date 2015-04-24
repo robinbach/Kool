@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curColor: {r: 0, g: 0, b: 0, a: 0}
-  lingerlength: 2
+  lingerlength: 1
 --- !u!222 &22230906
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -12,7 +12,7 @@ public class AlwaysBlink : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		img = GetComponent<Image> ();
-		Blink (100, 1f);
+		Blink (1000, 1f);
 		TV = UnityEngine.Object.FindObjectOfType<TutorialView>();
 	}
 

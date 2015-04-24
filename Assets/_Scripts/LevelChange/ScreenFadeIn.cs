@@ -10,7 +10,7 @@ public class ScreenFadeIn : MonoBehaviour {
 
 	public Color curColor;
 
-	public float lingerlength = 2.0f;
+	public float lingerlength = 1.0f;
 	// Use this for initialization
 	public void Start () {
 		image = GetComponent<Image> ();
@@ -30,7 +30,7 @@ public class ScreenFadeIn : MonoBehaviour {
 				                        curColor.g,
 				                        curColor.b,
 				                        i);
-				yield return new WaitForSeconds (Time.fixedDeltaTime);
+				yield return new WaitForSeconds (lingerlength * Time.fixedDeltaTime);
 			}
 
 		}

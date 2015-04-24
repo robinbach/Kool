@@ -9,7 +9,7 @@ public class FetchStatistic : MonoBehaviour {
 
 	// the horizontal position of two column
 	// the vertical position is depended on the font size
-	int[] UIposX = new int[2] {-40, 160};
+	int[] UIposX = new int[2] {-80, 140};
 
 	float popUpSpeed = 1.5f;
 	// Use this for initialization
@@ -21,7 +21,7 @@ public class FetchStatistic : MonoBehaviour {
 	IEnumerator FetchStatistics()
 	{
 		GameStatistic.Instance.GetRates ();
-		txt.text = "scores\n";
+		txt.text = "kills\n";
 		for(int i = 0; i < 2; ++i)
 		{
 			GameObject textObj = Instantiate(TextObjPrefab) as GameObject;
@@ -67,6 +67,7 @@ public class FetchStatistic : MonoBehaviour {
 			yield return new WaitForSeconds(popUpSpeed);
 
 		}
+		GameStatistic.Instance.ResetStatistics ();
 	}
 
 }
